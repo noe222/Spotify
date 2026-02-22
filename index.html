@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar superior global -->
+    <header class="global-header">
+        <div class="header-logo">
+            <span class="icon icon-logo icon-24 spotify-logo"></span>
+        </div>
+        <div class="header-center">
+            <div class="header-search">
+                <button class="home-icon-btn">
+                    <span class="icon icon-home icon-24"></span>
+                </button>
+                <div class="search-box">
+                    <span class="icon icon-search icon-24 search-icon"></span>
+                    <input type="text" placeholder="¿Qué quieres reproducir?" class="search-input">
+                    <button class="browse-btn">
+                        <span class="icon icon-browse icon-16"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="header-link">Premium</button>
+            <button class="header-link">Asistencia</button>
+            <button class="header-link">Descargar</button>
+            <div class="separator"></div>
+            <button class="header-link">Instalar app</button>
+            <button class="header-link">Registrarse</button>
+            <button class="btn-login">Iniciar sesión</button>
+        </div>
+    </header>
+
+    <!-- Estructura principal -->
+    <div class="main-container">
+
+        <!-- Sidebar izquierda -->
+        <aside class="sidebar">
+
+            <!-- Sección biblioteca -->
+            <div class="library-section">
+                <div class="library-header">
+                    <a href="#" class="nav-item">
+                        <span class="icon icon-library icon-24 nav-icon"></span>
+                        <span>Tu biblioteca</span>
+                    </a>
+                    <button class="create-btn">
+                        <span class="icon icon-create icon-16"></span>
+                        <span>Crear</span>
+                    </button>
+                </div>
+
+                <!-- Acciones biblioteca -->
+                <div class="library-content">
+                    <div class="library-card">
+                        <h3>Crea tu primera lista</h3>
+                        <p>Es muy fácil, y te echamos una mano.</p>
+                        <button class="btn-primary">Crear lista</button>
+                    </div>
+                    <div class="library-card">
+                        <h3>Encuentra pódcasts que quieras seguir</h3>
+                        <p>Te avisaremos cuando salgan nuevos episodios</p>
+                        <button class="btn-primary">Explorar pódcasts</button>
+                    </div>
+                </div>
+
+                <!-- Footer | biblioteca -->
+                <div class="sidebar-footer">
+                    <div class="legal-links">
+                        <a href="#">Legal</a>
+                        <a href="#">Centro de seguridad y privacidad</a>
+                        <a href="#">Política de Privacidad</a>
+                        <a href="#">Configuración de cookies</a>
+                        <a href="#">Información sobre los anuncios</a>
+                        <a href="#">Accesibilidad</a>
+                    </div>
+
+                    <p class="cookies-text">Cookies</p>
+
+                    <!-- Botón de idioma -->
+                    <button class="language-btn">
+                        <span class="icon icon-world icon-16 language-icon"></span>
+                        Español de España
+                    </button>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+
+            <!-- Contenido scrollable -->
+            <div class="content-scroll">
+
+                <!-- Canciones en tendencia -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h2>Canciones en tendencia</h2>
+                        <a href="#" class="show-all">Mostrar todos</a>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://imgs.search.brave.com/ccM7vu0tK-2TEoD7WxHBXussa39dQ8ceHYJYjSUBENI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmF1/ZGlvbWFjay5jb20v/ZW5jb3JlLXJlY29y/ZGluZ3MvMzE4NWJj/NTZhYy53ZWJwP3dp/ZHRoPTM2MA"
+                                    alt=" SETEADORA REMIX">
+                                <button class="play-btn">
+                                    <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M7.05 3.606l13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">SETEADORA REMIX</h3>
+                                <p class="card-subtitle">LAINA, JC Reyes</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/dtmf.webp" alt="DtMF">
+                                <button class=" play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">DtMF</h3>
+                                <p class="card-subtitle">Bad Bunny</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/aitana.webp" alt="6 DE FEBRERO">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">6 DE FEBRERO</h3>
+                                <p class="card-subtitle">Aitana</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02ec96e006b8bddc4ed3ebb0b6"
+                                    alt="5 Estrelllas - W Sound #35">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">5 Estrellas - W Sound #35</h3>
+                                <p class="card-subtitle">W Sound, Myke Towers, Ovy On The Drums</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02b0dd6a5cd1dec96c4119c262" alt="MULAN">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">MULAN</h3>
+                                <p class="card-subtitle">LA PANTERA, CHUCHO FLASH</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02f2248cf6dad1d6c062587249"
+                                    alt="MUCHACHA">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">MUCHACHA</h3>
+                                <p class="card-subtitle">Aitana, Kiki Albarax, Kkajunny</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Artistas populares -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h2>Artistas populares</h2>
+                        <a href="#" class="show-all">Mostrar todos</a>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="card artist-card">
+                            <div class="card-image artist-image">
+                                <img src="img/lisboa.jpg" alt=" Bad Bunny">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Bad Bunny</h3>
+                                <p class="card-subtitle">Artista</p>
+                            </div>
+                        </div>
+
+                        <div class="card artist-card">
+                            <div class="card-image artist-image">
+                                <img src="img/Foto moto lado.png" alt="Myke Towers">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Myke Towers</h3>
+                                <p class="card-subtitle">Artista</p>
+                            </div>
+                        </div>
+
+                        <div class="card artist-card">
+                            <div class="card-image artist-image">
+                                <img src="img/Foto moto lado.png" alt="KAROL G">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">KAROL G</h3>
+                                <p class="card-subtitle">Artista</p>
+                            </div>
+                        </div>
+
+                        <div class="card artist-card">
+                            <div class="card-image artist-image">
+                                <img src="img/Foto moto lado.png" alt="Rauw Alejandro">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Rauw Alejandro</h3>
+                                <p class="card-subtitle">Artista</p>
+                            </div>
+                        </div>
+
+                        <div class="card artist-card">
+                            <div class="card-image artist-image">
+                                <img src="img/Foto moto lado.png" alt="Quevedo">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Quevedo</h3>
+                                <p class="card-subtitle">Artista</p>
+                            </div>
+                        </div>
+
+                        <div class="card artist-card">
+                            <div class="card-image artist-image">
+                                <img src="img/Foto moto lado.png" alt="Mora">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Mora</h3>
+                                <p class="card-subtitle">Artista</p>
+                            </div>
+                        </div>
+
+                        <div class="card artist-card">
+                            <div class="card-image artist-image">
+                                <img src="img/Foto moto lado.png" alt="JC Reyes">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">JC Reyes</h3>
+                                <p class="card-subtitle">Artista</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Álbumes y sencillos populares -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h2>Álbumes y sencillos populares</h2>
+                        <a href="#" class="show-all">Mostrar todos</a>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="DTMF">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">DTMF</h3>
+                                <p class="card-subtitle">Bad Bunny</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="LA VIDA ES UNA">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">LA VIDA ES UNA</h3>
+                                <p class="card-subtitle">KAROL G</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="LVEU: TIEMPOS DE QUE">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">LVEU: TIEMPOS DE QUE</h3>
+                                <p class="card-subtitle">Myke Towers</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="MULAN">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">MULAN</h3>
+                                <p class="card-subtitle">LA PANTERA, CHUCHO FLASH</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="6 DE FEBRERO">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">6 DE FEBRERO</h3>
+                                <p class="card-subtitle">Aitana</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="SETEADORA REMIX">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">SETEADORA REMIX</h3>
+                                <p class="card-subtitle">LAINA, JC Reyes</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Emisoras populares -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Emisoras populares</h2>
+                        <a href="#" class="show-all">Mostrar todos</a>
+                    </div>
+                    <div class="cards-grid">
+                        <!-- Card 1 -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="Radio Bad Bunny">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Radio Bad Bunny</h3>
+                                <p class="card-subtitle">Con Myke Towers, Rauw Alejandro, Anuel AA...</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="Radio Feid">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Radio Feid</h3>
+                                <p class="card-subtitle">Con KAROL G, J Balvin, Maluma y más</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/Foto moto lado.png" alt="Radio Quevedo">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Radio Quevedo</h3>
+                                <p class="card-subtitle">Con Saiko, Mora, La Pantera y más</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Listas de éxitos -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Listas de éxitos</h2>
+                        <a href="#" class="show-all">Mostrar todos</a>
+                    </div>
+                    <div class="cards-grid">
+                        <!-- Card 1 -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg"
+                                    alt="Top 50 Global">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Top 50 - Global</h3>
+                                <p class="card-subtitle">Tu actualización diaria de las canciones más...</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_es_default.jpg"
+                                    alt="Top 50 España">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Top 50 - España</h3>
+                                <p class="card-subtitle">Tu actualización diaria de las canciones más...</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://i.scdn.co/image/ab67616d00001e028a3f0a3ca7d296781c3e34b9"
+                                    alt="Viral 50 Global">
+                                <button class="play-btn"></button>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Viral 50 - Global</h3>
+                                <p class="card-subtitle">Tu actualización diaria de las canciones más...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+    <!-- Barra de registro global fija -->
+    <div class="signup-bar">
+        <div class="signup-content">
+            <p class="signup-title">Muestra de Spotify</p>
+            <p class="signup-text">Regístrate para disfrutar de canciones y pódcasts sin límites, con anuncios
+                ocasionales. No hace falta tarjeta de crédito.</p>
+        </div>
+        <button class="btn-signup">Registrarte gratis</button>
+    </div>
+</body>
+
+</html>
