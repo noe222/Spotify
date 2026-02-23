@@ -98,3 +98,20 @@
 ![Tablet Fase 2 | Inicios](image-1.png)
 
 ![Mobile Fase 2 | Inicios](image-2.png)
+
+
+---
+
+![Tablet 1](image-3.png)
+
+D![tablet 2](image-4.png)
+
+![tablet 3](image-5.png)
+
+---
+
+![mobile 1](image-6.png)
+
+![mobile 2](image-7.png)
+
+![mobile 3](image-9.png)
