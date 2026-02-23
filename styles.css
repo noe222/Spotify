@@ -735,6 +735,222 @@ img {
 }
 
 /* ==========================================
+   FASE 2: RESPONSIVE DESIGN
+   ========================================== */
+
+/* 1. Clases de utilidad generales */
+.mobile-only {
+    display: none !important; /* Oculto en escritorio y tablet */
+}
+
+/* --- ESTILOS DEL NUEVO FOOTER MAIN (Escritorio y Tablet) --- */
+.main-footer {
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h4 {
+    color: var(--spotify-text);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.footer-column a {
+    color: var(--spotify-text-gray);
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: var(--spotify-text);
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--spotify-light-gray);
+    color: var(--spotify-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.social-btn:hover {
+    background-color: #727272;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid var(--spotify-light-gray);
+    margin-bottom: 32px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-legal a, .copyright {
+    color: var(--spotify-text-gray);
+    font-size: 12px;
+}
+
+.footer-legal a:hover {
+    color: var(--spotify-text);
+}
+
+
+/* ==========================================
+   MEDIA QUERY: TABLET (601px a 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+    
+    /* 1. Grid Principal: Sidebar pasa al 25% */
+    .main-container {
+        grid-template-columns: 25% 1fr; 
+    }
+
+    /* 2. Header: Achicamos la barra de búsqueda para que quepan los botones */
+    .header-search {
+        max-width: 300px; /* Búsqueda más pequeña */
+    }
+    
+    .header-link.desktop-only {
+        /* Ocultamos algunos enlaces de texto para ganar espacio en Tablet si es necesario,
+           o reducimos el padding. Vamos a reducir el padding primero */
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+
+    /* 3. Tarjetas: Hacemos que la grid sea un poco más permisiva */
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 16px;
+    }
+}
+
+
+/* ==========================================
+   MEDIA QUERY: MÓVIL (hasta 600px)
+   ========================================== */
+@media (max-width: 600px) {
+    
+    /* 1. Visibilidad de elementos (Mostrar móvil, ocultar escritorio) */
+    .mobile-only {
+        display: inline-flex !important; /* Mostramos los botones ocultos */
+        align-items: center;
+    }
+    .desktop-only, .header-center, .sidebar {
+        display: none !important; /* Ocultamos botones, buscador y barra lateral */
+    }
+
+    /* 2. Cabecera (Header) */
+    .global-header {
+        padding: 8px 16px; /* Menos espacio a los lados */
+    }
+
+    .btn-open-app {
+        background-color: var(--spotify-text);
+        color: var(--spotify-black);
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 16px;
+        border-radius: 500px;
+        margin-right: 12px;
+    }
+
+    .hamburger-btn {
+        background: transparent;
+        color: var(--spotify-text);
+    }
+
+    /* 3. Estructura Principal */
+    .main-container {
+        grid-template-columns: 1fr; /* Una sola columna al quitar la sidebar */
+        padding: 0; /* Quitamos márgenes exteriores */
+    }
+
+    .main-content {
+        border-radius: 0; /* En móvil, el fondo gris toca los bordes de la pantalla */
+    }
+
+    .content-scroll {
+        padding: 16px 16px 80px 16px; /* Padding interno ajustado */
+    }
+
+    /* 4. Scroll Horizontal para las Tarjetas */
+    .cards-grid {
+        display: flex; /* Cambiamos grid por flexbox */
+        flex-wrap: nowrap; /* Evitamos que salten a la línea de abajo (crucial) */
+        overflow-x: auto; /* Activamos el scroll horizontal */
+        gap: 16px;
+        padding-bottom: 8px; /* Pequeño respiro abajo */
+        
+        /* Ocultar la barra de scroll visualmente para que quede más limpio */
+        -ms-overflow-style: none;  /* IE y Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    /* Ocultar barra de scroll en Chrome/Safari */
+    .cards-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        flex: 0 0 140px; /* Forzamos a que cada tarjeta mida exactamente 140px de ancho y no encoja */
+    }
+
+    /* 5. Footer a una sola columna */
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
    SISTEMA DE ICONOS (CSS Masks)
    ========================================== */
 
