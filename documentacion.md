@@ -77,3 +77,24 @@
 ![alt text](img/image.png)
 
 ![alt text](img/image-1.png)
+
+---
+
+# Spotify FASE 2
+
+## Resumen
+
+**Objetivo:** Crear una réplica visual exacta de la página principal de Spotify. (Implementar Responsive en tablet y movil)
+
+**Fecha:** 23/2/26 
+**Fase actual:** FASE 2 - Mobile | Tablet (Responsive)
+
+
+
+
+
+![Desktop Fase 2 | Inicios](image.png)
+
+![Tablet Fase 2 | Inicios](image-1.png)
+
+![Mobile Fase 2 | Inicios](image-2.png)

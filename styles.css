@@ -233,7 +233,6 @@ img {
     grid-template-columns: 420px 1fr;
     grid-template-rows: 1fr;
     height: calc(100vh - 64px);
-    /* Ocupamos todo el alto menos el navbar */
     gap: 8px;
     padding: 8px;
     margin-top: 64px;
@@ -547,9 +546,20 @@ img {
 /* Grid tarjetas */
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto;  /* Activa el scroll lateral */
     gap: 24px;
+    padding-bottom: 16px; 
+    
+    /* Ocultar la barra de scroll*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Ocultar barra de scroll en Chrome/Safari */
+.cards-grid::-webkit-scrollbar {
+    display: none;
 }
 
 /* Tarjetas individuales */
@@ -562,6 +572,8 @@ img {
     gap: 12px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex: 0 0 180px; 
+    align-self: stretch; 
 }
 
 .card:hover {
@@ -584,6 +596,7 @@ img {
     border-radius: 4px;
     overflow: hidden;
     box-shadow: none;
+    flex-shrink: 0; 
 }
 
 .artist-card .card-image {
@@ -597,7 +610,6 @@ img {
 }
 
 /* Botón reproducción */
-/* Botón de reproducción (Triángulo CSS puro) */
 .play-btn {
     position: absolute;
     bottom: 8px;
@@ -629,7 +641,6 @@ img {
     border-bottom: 8px solid transparent;
     border-left: 14px solid var(--spotify-dark);
     margin-left: 4px;
-    /* Ajuste óptico central */
 }
 
 .play-btn:hover {
@@ -734,9 +745,6 @@ img {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* ==========================================
-   FASE 2: RESPONSIVE DESIGN
-   ========================================== */
 
 /* 1. Clases de utilidad generales */
 .mobile-only {
@@ -829,54 +837,85 @@ img {
     color: var(--spotify-text);
 }
 
+/*Tablet */
 
-/* ==========================================
-   MEDIA QUERY: TABLET (601px a 1024px)
-   ========================================== */
 @media (max-width: 1024px) {
     
-    /* 1. Grid Principal: Sidebar pasa al 25% */
     .main-container {
-        grid-template-columns: 25% 1fr; 
+        grid-template-columns: 280px 1fr;
+    }
+    
+    .header-center {
+        flex: 0;
+        justify-content: flex-start;
+        margin-left: 8px;
     }
 
-    /* 2. Header: Achicamos la barra de búsqueda para que quepan los botones */
     .header-search {
-        max-width: 300px; /* Búsqueda más pequeña */
+        position: static !important;
+        transform: none !important;
+        justify-content: flex-start;
+        max-width: none;
+        width: auto;
+    }
+    
+    .header-search .search-box {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        border-radius: 50%;
+        background-color: #242424;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: none;
+    }
+
+    .header-search .search-input,
+    .header-search .browse-btn {
+        display: none !important;
+    }
+
+    /* Mostrar menú hamburguesa derecha del todo */
+    .hamburger-btn.mobile-only {
+        display: flex !important;
+        align-items: center;
+        background: transparent;
+        color: var(--spotify-text);
+        margin-left: 8px;
     }
     
     .header-link.desktop-only {
-        /* Ocultamos algunos enlaces de texto para ganar espacio en Tablet si es necesario,
-           o reducimos el padding. Vamos a reducir el padding primero */
-        padding: 8px 4px;
+        padding: 8px 12px;
         font-size: 14px;
     }
 
-    /* 3. Tarjetas: Hacemos que la grid sea un poco más permisiva */
     .cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 16px;
+    }
+    
+    .card {
+        flex: 0 0 160px;
     }
 }
 
 
-/* ==========================================
-   MEDIA QUERY: MÓVIL (hasta 600px)
-   ========================================== */
+/*Movil */
+
 @media (max-width: 600px) {
     
     /* 1. Visibilidad de elementos (Mostrar móvil, ocultar escritorio) */
     .mobile-only {
-        display: inline-flex !important; /* Mostramos los botones ocultos */
+        display: inline-flex !important; 
         align-items: center;
     }
     .desktop-only, .header-center, .sidebar {
-        display: none !important; /* Ocultamos botones, buscador y barra lateral */
+        display: none !important;
     }
 
     /* 2. Cabecera (Header) */
     .global-header {
-        padding: 8px 16px; /* Menos espacio a los lados */
+        padding: 8px 16px;
     }
 
     .btn-open-app {
@@ -896,38 +935,35 @@ img {
 
     /* 3. Estructura Principal */
     .main-container {
-        grid-template-columns: 1fr; /* Una sola columna al quitar la sidebar */
-        padding: 0; /* Quitamos márgenes exteriores */
+        grid-template-columns: 1fr;
+        padding: 0; 
     }
 
     .main-content {
-        border-radius: 0; /* En móvil, el fondo gris toca los bordes de la pantalla */
+        border-radius: 0;
     }
 
     .content-scroll {
-        padding: 16px 16px 80px 16px; /* Padding interno ajustado */
+        padding: 16px 16px 80px 16px;
     }
 
     /* 4. Scroll Horizontal para las Tarjetas */
     .cards-grid {
-        display: flex; /* Cambiamos grid por flexbox */
-        flex-wrap: nowrap; /* Evitamos que salten a la línea de abajo (crucial) */
-        overflow-x: auto; /* Activamos el scroll horizontal */
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 16px;
-        padding-bottom: 8px; /* Pequeño respiro abajo */
-        
-        /* Ocultar la barra de scroll visualmente para que quede más limpio */
-        -ms-overflow-style: none;  /* IE y Edge */
-        scrollbar-width: none;  /* Firefox */
+        padding-bottom: 8px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
     
-    /* Ocultar barra de scroll en Chrome/Safari */
     .cards-grid::-webkit-scrollbar {
         display: none;
     }
 
     .card {
-        flex: 0 0 140px; /* Forzamos a que cada tarjeta mida exactamente 140px de ancho y no encoja */
+        flex: 0 0 140px; 
     }
 
     /* 5. Footer a una sola columna */

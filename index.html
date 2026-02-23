@@ -13,11 +13,12 @@
 </head>
 
 <body>
-    <!-- Navbar superior global -->
-    <header class="global-header">
+    <!-- Navbar-->
+   <header class="global-header">
         <div class="header-logo">
             <span class="icon icon-logo icon-24 spotify-logo"></span>
         </div>
+        
         <div class="header-center">
             <div class="header-search">
                 <button class="home-icon-btn">
@@ -32,18 +33,21 @@
                 </div>
             </div>
         </div>
+
         <div class="header-actions">
-            <button class="header-link desktop-only">Premium</button>
-            <button class="header-link desktop-only">Asistencia</button>
-            <button class="header-link desktop-only">Descargar</button>
-            <div class="separator desktop-only"></div>
-            <button class="header-link desktop-only">Instalar app</button>
-            <button class="header-link desktop-only">Registrarse</button>
+            <button class="header-link desktop-only" style="display: flex; align-items: center; gap: 6px;">
+                <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 11.5L3.5 7h3V1.5h3V7h3L8 11.5zM2 13v1.5h12V13H2z"></path></svg>
+                Instalar app
+            </button>
+            <button class="header-link desktop-only">Registrarte</button>
             <button class="btn-login desktop-only">Iniciar sesión</button>
+            
             <button class="btn-open-app mobile-only">Open App</button>
             <button class="hamburger-btn mobile-only">
                 <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path></svg>
             </button>
+        </div>
+    </header>
         </div>
         </div>
     </header>
@@ -94,7 +98,7 @@
 
                     <p class="cookies-text">Cookies</p>
 
-                    <!-- Botón de idioma -->
+                    <!-- Botón idioma -->
                     <button class="language-btn">
                         <span class="icon icon-world icon-16 language-icon"></span>
                         Español de España
@@ -110,7 +114,7 @@
             <!-- Contenido scrollable -->
             <div class="content-scroll">
 
-                <!-- Canciones en tendencia -->
+                <!-- Canciones tendencia -->
                 <section class="content-section">
                     <div class="section-header">
                         <h2>Canciones en tendencia</h2>
@@ -122,11 +126,6 @@
                                 <img src="https://imgs.search.brave.com/ccM7vu0tK-2TEoD7WxHBXussa39dQ8ceHYJYjSUBENI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmF1/ZGlvbWFjay5jb20v/ZW5jb3JlLXJlY29y/ZGluZ3MvMzE4NWJj/NTZhYy53ZWJwP3dp/ZHRoPTM2MA"
                                     alt=" SETEADORA REMIX">
                                 <button class="play-btn">
-                                    <svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M7.05 3.606l13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                             <div class="card-content">
@@ -137,7 +136,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="img/dtmf.webp" alt="DtMF">
+                                <img src="https://imgs.search.brave.com/D9OkOaqigeRC9Dlu_t_kF6jje77Unysy8Et-Epg5_XE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LmRlYml0aXJhcm1h/c2ZvdG9zLmNvbS9j/ZG4vc2hvcC9maWxl/cy9hcnR3b3JrNDk4/ZjhjNjQtMzEzOC00/M2E4LWJmYmItZWYx/ZWQxNTQ1MWEzLUxB/UkdFX2E1ZTZkZDQ2/LTY2MGYtNDBmMS05/ZjJhLTgyMWI2Njhm/ODY3Ny5qcGc_dj0x/NzM2MDk4MzYzJndp/ZHRoPTE0NDU" alt="DtMF">
                                 <button class=" play-btn"></button>
                             </div>
                             <div class="card-content">
@@ -159,7 +158,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="https://i.scdn.co/image/ab67616d00001e02ec96e006b8bddc4ed3ebb0b6"
+                                <img src="https://imgs.search.brave.com/rqy5b65ReKejkLwATitQfpn-IbAZK3UnYR0gUhwg1tw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLUxneUNu/N3VjUVZRUGxVWU0t/SjdCTHVnLXQxMDgw/eDEwODAucG5n"
                                     alt="5 Estrelllas - W Sound #35">
                                 <button class="play-btn"></button>
                             </div>
@@ -477,9 +476,10 @@
                     </div>
                     
                     <div class="footer-social">
-                        <button class="social-btn"><i class="fa-brands fa-instagram"></i></button>
-                        <button class="social-btn"><i class="fa-brands fa-twitter"></i></button>
-                        <button class="social-btn"><i class="fa-brands fa-facebook-f"></i></button>
+                        <button class="social-btn"><i class="fa-brands fa-instagram"></i> <img src="https://imgs.search.brave.com/sR90KsOHLXVUZR0MOGAazwdPMA9j48AhA01fa-Flul4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LWluc3RhZ3JhbS1p/Y29uLXN2Zy1kb3du/bG9hZC1wbmctMzA3/Mzc0NC5wbmc_Zj13/ZWJwJnc9MTI4"></button>
+
+                        <button class="social-btn"><i class="fa-brands fa-twitter"></i> <img src="https://imgs.search.brave.com/fdCp99kheZ9ZBvpDVrMZ7Xh5JuW3wpPGFftEF2LAhIE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4y/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvYmxhY2std2hp/dGUtc29jaWFsLW1l/ZGlhLzMyL3R3aXR0/ZXJfb25saW5lX3Nv/Y2lhbF9tZWRpYS0x/MjgucG5n"> </button>
+                        <button class="social-btn"><i class="fa-brands fa-facebook-f"></i> <img src="https://imgs.search.brave.com/TlR8P7Dld7AwsByJ5fbVGyUja5_q5GyYdVAYDDDhvaU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vVUtoN0Uv/TUFHek5oVUtoN0Uv/MS90bC9jYW52YS1m/YWNlYm9vay1sb2dv/LU1BR3pOaFVLaDdF/LnBuZw"> </button>
                     </div>
 
                     <hr class="footer-divider">
@@ -504,7 +504,7 @@
 
         </main>
     </div>
-    <!-- Barra de registro global fija -->
+    <!-- Barra global fija -->
     <div class="signup-bar">
         <div class="signup-content">
             <p class="signup-title">Muestra de Spotify</p>
