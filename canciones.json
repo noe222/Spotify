@@ -1,0 +1,34 @@
+{
+    "canciones": [
+        {
+            "titulo": "SETEADORA REMIX",
+            "artista": "LAINA, JC Reyes",
+            "imagen": "https://imgs.search.brave.com/ccM7vu0tK-2TEoD7WxHBXussa39dQ8ceHYJYjSUBENI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmF1/ZGlvbWFjay5jb20v/ZW5jb3JlLXJlY29y/ZGluZ3MvMzE4NWJj/NTZhYy53ZWJwP3dp/ZHRoPTM2MA"
+        },
+        {
+            "titulo": "DtMF",
+            "artista": "Bad Bunny",
+            "imagen": "https://imgs.search.brave.com/D9OkOaqigeRC9Dlu_t_kF6jje77Unysy8Et-Epg5_XE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LmRlYml0aXJhcm1h/c2ZvdG9zLmNvbS9j/ZG4vc2hvcC9maWxl/cy9hcnR3b3JrNDk4/ZjhjNjQtMzEzOC00/M2E4LWJmYmItZWYx/ZWQxNTQ1MWEzLUxB/UkdFX2E1ZTZkZDQ2/LTY2MGYtNDBmMS05/ZjJhLTgyMWI2Njhm/ODY3Ny5qcGc_dj0x/NzM2MDk4MzYzJndp/ZHRoPTE0NDU"
+        },
+        {
+            "titulo": "6 DE FEBRERO",
+            "artista": "Aitana",
+            "imagen": "img/aitana.webp"
+        },
+        {
+            "titulo": "5 Estrellas",
+            "artista": "W Sound, Myke Towers, Ovy On The Drums",
+            "imagen": "https://imgs.search.brave.com/rqy5b65ReKejkLwATitQfpn-IbAZK3UnYR0gUhwg1tw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLUxneUNu/N3VjUVZRUGxVWU0t/SjdCTHVnLXQxMDgw/eDEwODAucG5n"
+        },
+        {
+            "titulo": "MULAN",
+            "artista": "LA PANTERA, CHUCHO FLASH",
+            "imagen": "https://i.scdn.co/image/ab67616d00001e02b0dd6a5cd1dec96c4119c262"
+        },
+        {
+            "titulo": "MUCHACHA",
+            "artista": "Aitana, Kiki Albarax, Kkajunny",
+            "imagen": "https://i.scdn.co/image/ab67616d00001e02f2248cf6dad1d6c062587249"
+        }
+    ]
+}

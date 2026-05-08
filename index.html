@@ -11,8 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 </head>
-
-<body>
     <!-- Navbar-->
    <header class="global-header">
         <div class="header-logo">
@@ -40,7 +38,7 @@
                 Instalar app
             </button>
             <button class="header-link desktop-only">Registrarte</button>
-            <button class="btn-login desktop-only">Iniciar sesión</button>
+            <button class="btn-login desktop-only" id="btn-login-header">Iniciar sesión</button>
             
             <button class="btn-open-app mobile-only">Open App</button>
             <button class="hamburger-btn mobile-only">
@@ -65,7 +63,7 @@
                         <span class="icon icon-library icon-24 nav-icon"></span>
                         <span>Tu biblioteca</span>
                     </a>
-                    <button class="create-btn">
+                    <button class="create-btn" id="btn-crear-lista">
                         <span class="icon icon-create icon-16"></span>
                         <span>Crear</span>
                     </button>
@@ -125,8 +123,7 @@
                             <div class="card-image">
                                 <img src="https://imgs.search.brave.com/ccM7vu0tK-2TEoD7WxHBXussa39dQ8ceHYJYjSUBENI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmF1/ZGlvbWFjay5jb20v/ZW5jb3JlLXJlY29y/ZGluZ3MvMzE4NWJj/NTZhYy53ZWJwP3dp/ZHRoPTM2MA"
                                     alt=" SETEADORA REMIX">
-                                <button class="play-btn">
-                                </button>
+                                <button class="play-btn btn-play-song"></button>
                             </div>
                             <div class="card-content">
                                 <h3 class="card-title">SETEADORA REMIX</h3>
@@ -513,6 +510,32 @@
         </div>
         <button class="btn-signup">Registrarte gratis</button>
     </div>
+
+    <!-- Modal de Login -->
+    <div class="modal-overlay" id="modal-login">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="icon icon-logo icon-24 spotify-logo"></span>
+                <h2 id="modal-titulo">Iniciar sesión en Spotify</h2>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email-input" id="label-email">Correo electrónico</label>
+                    <input type="email" id="email-input" placeholder="Introduce tu correo electrónico">
+                    <span class="error-message" id="error-email"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password-input" id="label-password">Contraseña</label>
+                    <input type="password" id="password-input" placeholder="Introduce tu contraseña">
+                    <span class="error-message" id="error-password"></span>
+                </div>
+                <span class="error-message" id="error-general"></span>
+                <button type="submit" class="btn-continuar" id="btn-continuar">Continuar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

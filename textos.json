@@ -1,0 +1,13 @@
+{
+    "titulo": "Iniciar sesión en Spotify",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "Introduce tu correo electrónico",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Introduce tu contraseña",
+    "botonContinuar": "Continuar",
+    "errorCamposVacios": "Por favor, completa todos los campos",
+    "errorCredenciales": "Correo electrónico o contraseña incorrectos",
+    "botonIniciarSesion": "Iniciar sesión",
+    "botonCerrarSesion": "Cerrar sesión",
+    "botonCrearLista": "Crear lista"
+}

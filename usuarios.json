@@ -1,0 +1,48 @@
+{
+    "usuarios": [
+        {
+            "email": "usuario1@spotify.com",
+            "password": "password123"
+        },
+        {
+            "email": "usuario2@spotify.com",
+            "password": "securepass456"
+        },
+        {
+            "email": "usuario3@spotify.com",
+            "password": "music2024"
+        },
+        {
+            "email": "admin@spotify.com",
+            "password": "admin123"
+        },
+        {
+            "email": "fan@spotify.com",
+            "password": "fan2024"
+        },
+        {
+            "email": "premium@spotify.com",
+            "password": "premium2024"
+        },
+        {
+            "email": "free@spotify.com",
+            "password": "freeuser"
+        },
+        {
+            "email": "artist@spotify.com",
+            "password": "artistpass"
+        },
+        {
+            "email": "test@spotify.com",
+            "password": "test1234"
+        },
+        {
+            "email": "demo@spotify.com",
+            "password": "demopass"
+        },
+        {
+            "email": "noe@spotify.com",
+            "password": "noe123"
+        }
+    ]
+}
