@@ -1,5 +1,3 @@
-// app.js - Spotify Dynamic Application
-
 document.addEventListener('DOMContentLoaded', () => {
     // Variables globales
     let isLoggedIn = false;
@@ -19,11 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorGeneral = document.getElementById('error-general');
     const btnContinuar = document.getElementById('btn-continuar');
 
-    // ==========================================
-    // CARGA DE DATOS JSON
-    // ==========================================
 
-    // Cargar textos del JSON
     async function cargarTextos() {
         try {
             const response = await fetch('textos.json');
@@ -34,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Cargar usuarios del JSON
     async function cargarUsuarios() {
         try {
             const response = await fetch('usuarios.json');
@@ -45,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Cargar canciones del JSON
     async function cargarCanciones() {
         try {
             const response = await fetch('canciones.json');
@@ -57,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Aplicar textos al modal
     function aplicarTextos() {
         document.getElementById('modal-titulo').textContent = textos.titulo || 'Iniciar sesión en Spotify';
         document.getElementById('label-email').textContent = textos.emailLabel || 'Correo electrónico';
@@ -67,18 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
         btnContinuar.textContent = textos.botonContinuar || 'Continuar';
     }
 
-    // ==========================================
-    // RENDERIZADO DE CANCIONES
-    // ==========================================
 
     function renderizarCanciones() {
         const cardsGrid = document.querySelector('.content-section:first-child .cards-grid');
         if (!cardsGrid) return;
 
-        // Limpiar contenido existente
         cardsGrid.innerHTML = '';
 
-        // Renderizar cada canción
         canciones.forEach((cancion, index) => {
             const card = document.createElement('div');
             card.className = 'card';
@@ -95,15 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
             cardsGrid.appendChild(card);
         });
 
-        // Añadir event listeners a los nuevos botones
         document.querySelectorAll('.btn-play-song').forEach(btn => {
             btn.addEventListener('click', abrirModal);
         });
     }
-
-    // ==========================================
-    // MODAL Y LOGIN
-    // ==========================================
 
     function abrirModal() {
         modalLogin.classList.add('active');
@@ -129,14 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let valido = true;
         limpiarErrores();
 
-        // Validar email
         if (!emailInput.value.trim()) {
             errorEmail.textContent = textos.errorCamposVacios || 'Por favor, completa todos los campos';
             emailInput.style.borderColor = '#f55';
             valido = false;
         }
 
-        // Validar contraseña
         if (!passwordInput.value.trim()) {
             errorPassword.textContent = textos.errorCamposVacios || 'Por favor, completa todos los campos';
             passwordInput.style.borderColor = '#f55';
@@ -160,12 +139,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = passwordInput.value;
 
         if (verificarCredenciales(email, password)) {
-            // Login exitoso
+
             isLoggedIn = true;
             cerrarModal();
             actualizarBotonLogin();
         } else {
-            // Credenciales incorrectas
+
             errorGeneral.textContent = textos.errorCredenciales || 'Correo electrónico o contraseña incorrectos';
         }
     }
@@ -185,11 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ==========================================
-    // EVENT LISTENERS
-    // ==========================================
 
-    // Botón de login en header
     btnLoginHeader.addEventListener('click', () => {
         if (isLoggedIn) {
             cerrarSesion();
@@ -198,32 +173,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Botón crear lista
     btnCrearLista.addEventListener('click', abrirModal);
 
-    // Envío del formulario
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         iniciarSesion();
     });
 
-    // Cerrar modal al hacer click fuera
     modalLogin.addEventListener('click', (e) => {
         if (e.target === modalLogin) {
             cerrarModal();
         }
     });
 
-    // Cerrar modal con Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modalLogin.classList.contains('active')) {
             cerrarModal();
         }
     });
-
-    // ==========================================
-    // INICIALIZACIÓN
-    // ==========================================
 
     async function init() {
         await Promise.all([cargarTextos(), cargarUsuarios(), cargarCanciones()]);
